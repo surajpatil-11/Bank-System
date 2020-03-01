@@ -26,7 +26,8 @@ public class RegisterController extends HttpServlet {
 			// System.out.println(username+" "+password+" "  + email + " "+mobile);
 			//PrintWriter out = response.getWriter();
 			// out.println(username+" "+password+" "+email+" "+mobile);
-			
+			String rad = request.getParameter("gender") ;
+			System.out.println(rad);
 			User user = new User() ;
 			user.setUsername(username); 
 			user.setPassword(password);

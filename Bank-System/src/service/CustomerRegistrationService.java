@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import model.Customer;
 import model.User;
 
+
+
 public class CustomerRegistrationService {
 	private static String url = "jdbc:mysql://localhost:3306/bank" ;
 	private static String uname = "root" ;

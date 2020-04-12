@@ -67,7 +67,7 @@
 					</div>
 					<!--  
 					// firstName middleName lastName gender houseNo street city state country pincode mobile dateOfBirth 
-			// occupation panNo aadharNo incomePerAnnum educationalQualification     -->
+			        // occupation panNo aadharNo incomePerAnnum educationalQualification     -->
 					<div class="form-group">
 						<label>Mobile</label> <input type="text" name="mobile"
 							class="form-control" placeholder="mobile" required>

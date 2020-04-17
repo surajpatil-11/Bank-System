@@ -18,8 +18,8 @@ public class CustomerRegistrationService {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			Connection con = DriverManager.getConnection(url,uname,pass) ;
-			
-			String sql = "INSERT INTO customer(first_name,middle_name,last_name,gender,house_no,street,city,state,country,pincode,mobile,data_of_birth,occupation,pan_no,aadhar_no,income_per_annum,educational_qualification  ) value(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
+			System.out.println("ok");
+			String sql = "INSERT INTO customer(first_name,middle_name,last_name,gender,house_no,street,city,state,country,pincode,mobile,data_of_birth,occupation,pan_no,aadhar_no,income_per_annum,balance,type,interest  ) value(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)" ;
 			PreparedStatement ps = con.prepareStatement(sql) ;
 			ps.setString(1 , customer.getFirstName() );
 			ps.setString(2 , customer.getMiddleName() );
@@ -32,13 +32,14 @@ public class CustomerRegistrationService {
 			ps.setString(9 , customer.getCountry() );
 			ps.setString(10 , customer.getPincode() );
 			ps.setString(11 , customer.getMobile() );
-			ps.setString(12 , customer.getDataOBirth() );
+			ps.setString(12 , customer.getDataOfBirth() );
 			ps.setString(13 , customer.getOccupation() );
 			ps.setString(14 , customer.getPanNo() );
 			ps.setString(15 , customer.getAadhar()  );
 			ps.setFloat(16 , customer.getIncomePerAnnum() );
-			ps.setString(17 , customer.getEducationalQualification() );
-			
+			ps.setFloat(17,customer.getBalance());
+			ps.setString(18, customer.getType());
+			ps.setFloat(19,customer.getInterest() );
 			ps.executeUpdate();		
 			
 		} catch(Exception e) {

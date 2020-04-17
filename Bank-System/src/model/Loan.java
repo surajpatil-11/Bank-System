@@ -7,6 +7,7 @@ public class Loan {
 	private String issuedBy ;
 	private String date ;
 	private float interest ;
+
 	
 	public int getLoanId() {
 		return loanId;

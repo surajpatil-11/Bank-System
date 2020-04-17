@@ -34,7 +34,9 @@ public class CustomerRegistrationController extends HttpServlet {
 			String panNo = request.getParameter("panNo");
 			String aadharNo = request.getParameter("aadharNo");
 			float incomePerAnnum = Float.parseFloat(request.getParameter("incomePerAnnum"));
-			String educationalQualification = request.getParameter("educationalQualification");
+			float balance = Float.parseFloat(request.getParameter("balance"));
+			float interest = Float.parseFloat(request.getParameter("interest"));
+			String type = request.getParameter("type");
 			
 			// firstName middleName lastName gender houseNo street city state country pincode mobile dateOfBirth 
 			// occupation panNo aadharNo incomePerAnnum educationalQualification
@@ -66,7 +68,7 @@ public class CustomerRegistrationController extends HttpServlet {
 		    System.out.println(panNo);
 		    System.out.println(aadharNo);
 		    System.out.println(incomePerAnnum );
-		    System.out.println(educationalQualification);
+		   
 		    System.out.println();
 		    
 		    customer.setFirstName(firstName) ;
@@ -80,16 +82,18 @@ public class CustomerRegistrationController extends HttpServlet {
 		    customer.setCountry(country) ;
 		    customer.setPincode(pincode) ;
 		    customer.setMobile(mobile) ;
-		    customer.setDataOBirth(dateOfBirth) ;
+		    customer.setDataOfBirth(dateOfBirth) ;
 		    customer.setOccupation(occupation) ;
 		    customer.setPanNo(panNo) ;
 		    customer.setAadhar(aadharNo) ;
 		    customer.setIncomePerAnnum(incomePerAnnum) ;
-		    customer.setEducationalQualification(educationalQualification) ;
-		    
-		    CustomerRegistrationService.register(customer);
-		    
+		    customer.setBalance(balance);
+		    customer.setInterest(interest);
+		    customer.setType(type);
+		         
+		   
 		    System.out.println(customer);
+		    CustomerRegistrationService.register(customer);
 			response.sendRedirect("login.jsp");
 		} catch (Exception e) {
 			e.printStackTrace();

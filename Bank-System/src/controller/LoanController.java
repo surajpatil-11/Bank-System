@@ -9,7 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 
 
 import model.Loan;
-//import service.CustomerRegistrationService;
+import service.LoanService;
 
 
 @WebServlet("/LoanController")
@@ -41,7 +41,7 @@ public class LoanController extends HttpServlet {
 			loan.setDate(date);
 			loan.setInterest(interest);
 
-			// CustomerRegistrationService.register(loan);
+			LoanService.register(loan);
 
 			System.out.println(loan);
 			response.sendRedirect("login.jsp");

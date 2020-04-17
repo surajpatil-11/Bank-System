@@ -34,7 +34,7 @@
 					</div>
 					
 					<div class="form-group">
-						<label class="radio- inline"> <input type="radio"
+						<label class="radio-inline"> <input type="radio"
 							name="gender" value="M">Male
 						</label> <label class="radio-inline"> <input type="radio"
 							name="gender" value="F">Female
@@ -93,7 +93,15 @@
 							class="form-control" required>
 					</div>
 					<div class="form-group">
-						<label>Educational Qualification</label> <input type="text" name="educationalQualification"
+						<label>Balance</label> <input type="text" name="balance"
+							class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Interest</label> <input type="text" name="interest"
+							class="form-control" required>
+					</div>
+					<div class="form-group">
+						<label>Type</label> <input type="text" name="type"
 							class="form-control" required>
 					</div>
 					

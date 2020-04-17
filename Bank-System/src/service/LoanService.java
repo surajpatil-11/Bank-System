@@ -12,7 +12,7 @@ import model.User;
 public class LoanService {
 	private static String url = "jdbc:mysql://localhost:3306/bank" ;
 	private static String uname = "root" ;
-	private static String pass = "hesoyam@123" ;
+	private static String pass = "root" ;
 	
 	public static void register(Loan loan) throws Exception {
 		try {

@@ -7,7 +7,7 @@ import model.Transaction;
 public class TransactionService {
 	private static String url = "jdbc:mysql://localhost:3306/bank";
 	private static String uname = "root";
-	private static String pass = "hesoyam@123";
+	private static String pass = "root";
 
 	public static boolean isAccountExist(int accountNo) {
 		try {

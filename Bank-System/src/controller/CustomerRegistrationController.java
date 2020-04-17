@@ -18,6 +18,7 @@ public class CustomerRegistrationController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		try {
+			System.out.println("ok");
 			String firstName = request.getParameter("firstName");
 			String middleName = request.getParameter("middleName");
 			String lastName = request.getParameter("lastName");
@@ -38,39 +39,7 @@ public class CustomerRegistrationController extends HttpServlet {
 			float interest = Float.parseFloat(request.getParameter("interest"));
 			String type = request.getParameter("type");
 			
-			// firstName middleName lastName gender houseNo street city state country pincode mobile dateOfBirth 
-			// occupation panNo aadharNo incomePerAnnum educationalQualification
-			// System.out.println(username+" "+password+" "  + email + " "+mobile);
-			//PrintWriter out = response.getWriter();
-			// out.println(username+" "+password+" "+email+" "+mobile);
-//			String rad = request.getParameter("gender") ;
-//			System.out.println(rad);
-//			User user = new User() ;
-//			user.setUsername(username); 
-//			user.setPassword(password);
-//			user.setMobile(mobile);
-//			user.setEmail(email);
-//			RegisterService.register(user);
-			Customer customer = new Customer(); 
-		    System.out.println(firstName);
-		    System.out.println(middleName);
-		    System.out.println(lastName);
-		    System.out.println(gender);
-		    
-		    System.out.println(houseNo);
-		    System.out.println(street);
-		    System.out.println(city);
-		    System.out.println(pincode);
-		    
-		    System.out.println(mobile);
-		    System.out.println(dateOfBirth);
-		    System.out.println(occupation);
-		    System.out.println(panNo);
-		    System.out.println(aadharNo);
-		    System.out.println(incomePerAnnum );
-		   
-		    System.out.println();
-		    
+			Customer customer = new Customer();     
 		    customer.setFirstName(firstName) ;
 		    customer.setMiddleName(middleName) ;
 		    customer.setLastName(lastName) ;

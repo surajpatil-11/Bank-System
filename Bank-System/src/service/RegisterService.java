@@ -10,7 +10,7 @@ public class RegisterService {
 	
 	private static String url = "jdbc:mysql://localhost:3306/rough" ;
 	private static String uname = "root" ;
-	private static String pass = "hesoyam@123" ;
+	private static String pass = "root" ;
 	
 	public static void register(User user) throws Exception {
 		try {

@@ -1,0 +1,271 @@
+<!-- https://atom.io/packages/atom-beautify pres ctrl + shift + B -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Dashboard - SB Admin</title>
+  <link href="css/styles.css" rel="stylesheet" />
+  <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="sb-nav-fixed">
+  <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+    <a class="navbar-brand" href="index.html">Online Banking</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button><!-- Navbar Search-->
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      <div class="input-group">
+        <input class="form-control" type="text" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2" />
+        <div class="input-group-append">
+          <button class="btn btn-primary" type="button"><i class="fas fa-search"></i></button>
+        </div>
+      </div>
+    </form>
+    <!-- Navbar-->
+    <ul class="navbar-nav ml-auto ml-md-0">
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="#">Settings</a><a class="dropdown-item" href="#">Activity Log</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="login.html">Logout</a>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <div id="layoutSidenav">
+    <div id="layoutSidenav_nav">
+      <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
+        <div class="sb-sidenav-menu">
+          <div class="nav">
+            <div class="sb-sidenav-menu-heading"> Account </div>
+            <a class="nav-link" href="401.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Create Account
+            </a>
+            <a class="nav-link" href="404.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Edit Account
+            </a>
+            <a class="nav-link" href="500.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Delete Account
+            </a>
+
+
+            <div class="sb-sidenav-menu-heading"> Loan </div>
+            <a class="nav-link" href="401.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Issue Loan
+            </a>
+
+
+            <div class="sb-sidenav-menu-heading"> Employee </div>
+            <a class="nav-link" href="401.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Add Employee
+            </a>
+            <a class="nav-link" href="404.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Edit Employee
+            </a>
+            <a class="nav-link" href="500.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Delete Employee
+            </a>
+
+
+            <div class="sb-sidenav-menu-heading"> Transaction </div>
+            <a class="nav-link" href="401.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Branch
+            </a>
+            <a class="nav-link" href="404.html">
+              <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
+                 Account
+            </a>
+
+          <!--  <div class="sb-sidenav-menu-heading">Loan</div>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
+              <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+               Issue Loan
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="layout-static.html">Static Navigation</a><a class="nav-link" href="layout-sidenav-light.html">Light Sidenav</a></nav>
+            </div>
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="false" aria-controls="collapsePages">
+              <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
+              Pages
+              <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+            </a>
+            <div class="collapse" id="collapsePages" aria-labelledby="headingTwo" data-parent="#sidenavAccordion">
+              <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseAuth" aria-expanded="false" aria-controls="pagesCollapseAuth">Authentication
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                <div class="collapse" id="pagesCollapseAuth" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                  <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="login.html">Login</a><a class="nav-link" href="register.html">Register</a><a class="nav-link" href="password.html">Forgot Password</a></nav>
+                </div>
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#pagesCollapseError" aria-expanded="false" aria-controls="pagesCollapseError">Error
+                  <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div></a>
+                <div class="collapse" id="pagesCollapseError" aria-labelledby="headingOne" data-parent="#sidenavAccordionPages">
+                  <nav class="sb-sidenav-menu-nested nav"><a class="nav-link" href="401.html">401 Page</a><a class="nav-link" href="404.html">404 Page</a><a class="nav-link" href="500.html">500 Page</a></nav>
+                </div>
+              </nav>
+            </div> -->
+
+
+          </div>
+        </div>
+        <div class="sb-sidenav-footer">
+          <div class="small">Logged in as:</div>
+          Start Bootstrap
+        </div>
+      </nav>
+    </div>
+    <div id="layoutSidenav_content">
+      <main>
+        <div class="container-fluid">
+          <div class="card mb-4">
+            <div class="card-header"><i class="fas fa-table mr-1"></i> Create Account </div>
+            <div class="card-body">
+              <!--  Insert form here -->
+              <form action="CustomerRegistrationController" method="post" >
+                <!-- One row start -->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>First Name</label> <input type="text" name="firstName" class="form-control" placeholder="First Name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Middle Name</label> <input type="text" name="middleName" class="form-control" placeholder="Middle Name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Last Name</label> <input type="text" name="lastName" class="form-control" placeholder="Last Name" required>
+                  </div>
+                </div>
+                <!-- One row end -->
+
+                <!-- 2nd row start -->
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label>DOB</label> <input type="date" name="dateOfBirth" class="form-control" placeholder="Last Name" required>
+                  </div>
+                  <div class="form-group col-md-6">
+                    <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Gender</label>
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref">
+                      <option selected>Choose...</option>
+                      <option value="1" name="gender">Male</option>
+                      <option value="2" name="gender">Female</option>
+                    </select>
+                  </div>
+                </div>
+                <!-- 2nd row end -->
+
+
+                <!-- 3rd row start  -->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>House No.</label> <input type="text" name="houseNo" class="form-control" placeholder="House No." required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Street</label> <input type="text" name="street" class="form-control" placeholder="Street" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>City</label> <input type="text" name="city" class="form-control" placeholder="City" required>
+                  </div>
+                </div>
+                <!-- 3rd row end  -->
+
+
+                <!-- 3rd row start  -->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>State</label> <input type="text" name="state" class="form-control" placeholder="State" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Country</label> <input type="text" name="country" class="form-control" placeholder="Country" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Pincode</label> <input type="text" name="lastName" class="form-control" placeholder="Pincode" required>
+                  </div>
+                </div>
+                <!-- 3rd row end  -->
+                <!-- 3rd row start  -->
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>Mobile</label> <input type="text" name="mobile" class="form-control" placeholder="Mobile" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Occupation</label> <input type="text" name="occupation" class="form-control" placeholder="Middle Name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>PAN no.</label> <input type="text" name="panNo" class="form-control" placeholder="PAN NO." required>
+                  </div>
+                </div>
+                <!-- 3rd row end  -->
+
+
+
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>Aadhar No.</label> <input type="text" name="aadharNo" class="form-control" placeholder="Aadhar No." required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Date Of Birth</label> <input type="date" name="dateOfBirth" class="form-control" placeholder="Date Of Birth" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Income Per Annum</label> <input type="text" name="incomePerAnnum" class="form-control" placeholder="Income" required>
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label>Balance</label> <input type="text" name="mobile" class="form-control" placeholder="Mobile" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Interest</label> <input type="text" name="occupation" class="form-control" placeholder="Middle Name" required>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <label>Account Type</label> <input type="text" name="type" class="form-control" placeholder="PAN NO." required>
+                  </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-primary">Sign in</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="py-4 bg-light mt-auto">
+        <div class="container-fluid">
+          <div class="d-flex align-items-center justify-content-between small">
+            <div class="text-muted">Copyright &copy; Your Website 2019</div>
+            <div>
+              <a href="#">Privacy Policy</a>
+              &middot;
+              <a href="#">Terms &amp; Conditions</a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+  <script src="assets/demo/chart-area-demo.js"></script>
+  <script src="assets/demo/chart-bar-demo.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" crossorigin="anonymous"></script>
+  <script src="assets/demo/datatables-demo.js"></script>
+</body>
+
+</html>
